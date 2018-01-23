@@ -1,0 +1,44 @@
+(COND (F F)(T T))
+(NULL (CONS 1 (CONS 2 NIL)))
+()
+NIL
+T
+89
+(PLUS 1 2 3)
+(PLUS T NIL)
+(PLUS 1)
+(LESS 4 5)
+(LESS 5 4)
+(EQ 3 4)
+
+(ATOM 1)
+(ATOM (CONS 1 2))
+(ATOM (CONS 1 NIL))
+(ATOM T)
+(ATOM NIL)
+(INT 34)
+(INT (CONS 1 NIL))
+(NULL NIL)
+(NULL ())
+(NULL 1)
+
+
+(CAR (CONS 4 NIL))
+(CDR (CONS 4 NIL))
+
+(PLUS 1 (PLUS F 3))
+(COND (F 1)(T (PLUS 3 4)))
+F
+(COND (F F)(T T))
+(COND (F F)(T T) ((NULL (CAR NIL))  T))
+
+(COND (F F)((EQ 3 4) T) ( T  (NULL (CDR NIL)) ))
+(COND (F F)(T T) ( T  (NULL (CDR NIL)) ))
+
+(COND (F F)(T T) (T (EQ 3 4)))
+(COND  (T (EQ 3 4)) (F F)(T T))
+(COND (F (CONS 1 NIL))(T NIL))
+(COND (F NIL)(T NIL))
+(COND (F (CONS 1 NIL))((EQ 3 4) (CONS 1 (CONS 2 NIL))))
+(COND (F (CONS 1 NIL))((EQ 3 4) (CONS 1 (CONS 2 NIL))) (T NIL))
+
